@@ -1,0 +1,198 @@
+
+.principal-container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas:
+    "navb"
+    "filtro"
+    "main"
+    "pagination"
+    "footer";
+   
+}
+
+.navb {
+    grid-area: navb;
+    background-image: url(../img/aside.jpg);
+    background-position: auto;
+    background-size: cover;
+    text-align: justify;
+}
+
+.nav-link {
+    background-color: rgb(166, 153, 187,0.5);
+    margin-left: 2rem;
+    padding : 0.5rem;
+    padding-right: 4rem;
+    display: none;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(123, 72, 155);
+    
+}
+
+.filtro {
+    grid-area: filtro;
+    background-color: rgba(216, 191, 216, 0.5) ; 
+    text-align: center;
+    color: azure; 
+    width: 100%; 
+    padding-top: 1rem; 
+}
+
+#filtros {
+    width: 90%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+.dropdown-menu {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 3rem;
+}
+
+.card {
+    width: 25%;
+    height: 80%;
+    border: 3px solid rgba(216, 191, 216, 0.5) ; 
+    text-align: center;
+   
+    
+}
+
+.card img {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 70%;
+    
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.fa-brands {
+    display: flex;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.pagination {
+    grid-area: pagination;
+    background-color: rgb(123, 72, 155); 
+    align-items: center;  
+    justify-content: center;
+}
+
+
+.paginations {
+    display: flex;
+    background-color: rgb(123, 72, 155); 
+    list-style-type: none;
+}
+
+@media (min-width: 992px) {
+    .principal-container {
+        grid-template-columns: 20rem 2fr;
+        grid-template-areas: 
+        "navb filtro"
+        "navb main"
+        "footer pagination";
+        height: 100vh;
+        background-color: rgb(123, 72, 155);
+        
+    }
+
+    .productos-container {
+        overflow: auto;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 0%;
+        overflow: auto;
+        background-color: rgb(123, 72, 155);
+
+    }
+
+    
+    
+    #filtros {
+        width: 90%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+    }
+    .dropdown-menu {
+        position: relative;
+        width: 90%;
+    }
+
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: right;
+        padding-left: 2rem;
+        
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+       font-size: large;
+       padding: auto;
+       
+       
+    }
+
+    .navb {
+        
+        flex-direction: column;
+        text-align: left;
+        justify-content: left;
+        
+        
+    }
+
+    .navbar-toggler-icon {
+        display: none;
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+
+
+
+
+
+
